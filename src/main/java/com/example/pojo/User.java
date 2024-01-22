@@ -1,25 +1,23 @@
 package com.example.pojo;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity(name = "users")
 public class User extends PanacheEntityBase {
+
     @Id
     Integer id;
     String name;
-    String Surname;
-
-
+    String surname;
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", Surname='" + Surname + '\'' +
+                ", surname='" + surname + '\'' +
                 '}';
     }
 
@@ -32,7 +30,7 @@ public class User extends PanacheEntityBase {
     }
 
     public String getSurname() {
-        return Surname;
+        return surname;
     }
 
     public void setId(Integer id) {
@@ -44,6 +42,6 @@ public class User extends PanacheEntityBase {
     }
 
     public void setSurname(String surname) {
-        Surname = surname;
+        this.surname = surname;
     }
 }

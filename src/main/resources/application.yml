@@ -3,5 +3,7 @@ greeting:
 
 quarkus:
   datasource:
-    jdbc.url: jdbc:postgresql://localhost:5432/employee
+    jdbc.url: jdbc:postgresql://localhost:5432/employee_quarkus
+    jdbc.username: postgres
+    jdbc.password: 1
     ssl: false
